@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <img class="icon" src="image/img_01.jpg">
+   <p id="word">风景真美啊!//////</p>
+   <p></p>
+   <button>隐藏</button>
+
+   <script type="text/javascript">
+       // 拿到要操作的标签
+       var img = document.getElementsByClassName('icon')[0];
+       var p = document.getElementById('word');
+       var btn = document.getElementsByTagName('button')[0];
+
+       btn.onclick = function(){
+          if(btn.innerText == '隐藏'){
+              // 隐藏
+              img.style.display = 'none';
+              p.style.display = 'none';
+              btn.innerText = '显示';
+          }else{
+              // 显示
+              img.style.display = 'inline-block';
+              p.style.display = 'block';
+              btn.innerText = '隐藏';
+          }
+
+       }
+   </script>
+</body>
+</html>

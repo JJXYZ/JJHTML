@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        // -------------JS中常见的数据类型----------
+        var age = 18; //number
+        var money = 1.09; //number
+        var name = 'jack';//string
+        var name1 = 'rose';//string
+        var result = true; // boolean  false
+        var score = null; // object
+
+        // typeof 用于判断变量的真实类型
+//       console.log(age, money, name, name1, result, score);
+//       console.log(typeof age,typeof  money,typeof  name,typeof  name1,typeof  result,typeof  score);
+
+       // 字符串拼接
+       // 规律: 运算是从左往右,任何类型的变量与string类型拼接都会被转为string
+        var newName = name +'-'+ name1;
+//        console.log(newName);
+
+     // 题目
+        var str1 = 10 + 10 + '10' + '10'; //  201010
+        var str2 = '10' + '10' + 10 + 10; // 10101010
+        var str3 = ('10' + 10) + '10' + 10;// 10101010
+//        console.log(str1, str2);
+
+     // -----------------数组------------------数组中可以放任意类型的数据
+        var newArr = [10, -5, age, name, result, score, ['哈哈哈', 'dewdew']];
+        // 数组的类型 object
+//        console.log(typeof  newArr);
+
+        // 输出数组中的内容(遍历) JS中遍历的两种方式
+        // 1.
+//        for(var i=0; i<newArr.length; i++){
+//            console.log(newArr[i]);
+//        }
+
+        // 2.
+//        for(var i in newArr){
+//            console.log(i, newArr[i]);
+//        }
+//        console.log(newArr[newArr.length -1][0]);
+
+        // 删除最后一个元素,添加一个新的元素到数组中 pop()和push()
+//        newArr.pop(); //删除数组中最后的元素
+          newArr.push(['大神5期']);
+//         console.log(newArr);
+
+
+
+       // ------------取出数组中的最大值和最小值-----------
+       // Math.min  Math.max   Math.min.apply(null, 数组)  Math.max.apply(null, 数组)
+        var newNumbers = [10,99,2121,23443];
+        // 取出最小值
+//        var minNumber = Math.min(10,32,34,4554,-9);
+        var minNumber = Math.min.apply(null,newNumbers);
+        // 取出最大值
+        var maxNumber = Math.max.apply(null, newNumbers);
+        console.log(minNumber, maxNumber);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

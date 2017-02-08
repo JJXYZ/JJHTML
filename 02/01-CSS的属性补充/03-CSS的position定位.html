@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+         /**
+            子标签相对父标签进行定位:
+              position  和 left right top bottom
+            要定位的必要条件:
+              父标签的position属性必须改为relative, 子标签的属性必须设置为absolute
+              然后再结合left right top bottom定位
+         **/
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        div{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+
+            /*position: static;*/
+            position: relative;
+        }
+
+        span{
+            background-color: green;
+            /*margin-left: 20px;*/
+            /*margin-top: 20px;*/
+            /*左上角*/
+            position: absolute;
+            /*left: 20px;*/
+            /*top: 20px;*/
+
+            /*右下角*/
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+   <div>
+       <span>212121</span>
+   </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* 通配符,作用于所有的标签, 可以用于设置一些公共的样式(但是效率不高,不建议使用) */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        /* -------------------块级标签----------------------- */
+        div{
+            background-color: red;
+            width: 400px;
+            height: 100px;
+
+            /*隐藏标签*/
+            /*display: none;*/
+
+            /*让块级标签成为行内标签*/
+            /*display: inline;*/
+
+            /*让块级标签成为行内-块级标签*/
+            display: inline-block;
+        }
+
+        p{
+            background-color: blue;
+            /*width: 250px;*/
+        }
+
+        /* -------------------行内标签----------------------- */
+        span{
+            background-color: violet;
+            width: 300px;
+            height: 150px;
+            /*让行内标签改变成块级标签*/
+            /*display: block;*/
+        }
+
+        a{
+            background-color: teal;
+        }
+
+        /* -------------------行内-块级标签----------------------- */
+        input{
+            width: 500px;
+            height: 50px;
+        }
+
+        button{
+            width: 250px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+   <!--块级标签-->
+   <div>我是块级标签</div>
+   <div>我是块级标签</div>
+   <p>段落</p>
+   <br>
+   <br>
+
+   <!--行内标签-->
+   <span>我是span,行内标签</span>
+   <span>我是span,行内标签</span>
+   <a href="#">超链接</a>
+   <a href="#">超链接</a>
+   <br>
+   <br>
+
+   <!--行内-块级标签-->
+   <input placeholder="我是输入框">
+   <button>我是按钮</button>
+</body>
+</html>

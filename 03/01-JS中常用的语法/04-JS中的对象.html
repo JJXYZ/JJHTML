@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        // this this在哪个对象中,就代表该对象
+        var dog = {
+            name : 'wangcai',
+            age : 19,
+            height : 1.55,
+            friends : ['xixi','lili'],
+            eat : function(someThing){
+                console.log(this.name + '------吃'+someThing);
+            },
+            run : function(someWhere){
+                console.log(this.name +'------跑'+someWhere);
+            }
+        };
+
+        // 调用狗对象的属性
+        console.log(dog.name, dog.friends);
+        // 调用狗对象的方法
+        dog.eat('骨头');
+        dog.run('操场');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

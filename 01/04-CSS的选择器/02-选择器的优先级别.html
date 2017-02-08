@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--
+      CSS选择器遵循的规律:
+      1.相同级别的选择器遵循: a.就近原则  b.叠加原则
+      2.选择器之间的优先级:
+        important > 内联 > id > 类 | 伪元素 | 伪类 | 属性选择 >标签 > 通配符 > 继承
+      3.选择器的针对性越强，它的优先级就越高
+      4.选择器的权值加到一起，大的优先；如果权值相同，后定义的优先
+    -->
+
+    <style>
+        /*复合选择器*/
+        div.test1{ /* 权值:1+10*/
+            color: yellow;
+        }
+
+        div#main{ /* 权值:1+100*/
+            color:aqua;
+        }
+
+        /*id选择器*/
+        #main{ /* 权值:100*/
+            color: mediumvioletred;
+        }
+
+        #second{ /* 权值:100*/
+            color: forestgreen;
+        }
+
+        /*类选择器*/
+        .test1{ /* 权值:10*/
+            color: goldenrod;
+        }
+
+        .test2{ /* 权值:10*/
+            color: purple;
+        }
+
+        /*标签选择器*/
+        div{ /* 权值:1*/
+            color: red !important;
+        }
+
+        div{ /* 权值:1+1000*/
+            color: green;
+        }
+
+        /*通配符*/
+        *{ /* 权值:0*/
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="test1 test2" style="color: darkolivegreen;">我是div</div>
+</body>
+</html>

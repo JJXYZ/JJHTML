@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <img class="icon" src="image/img_01.jpg">
+   <p></p>
+   <button>切换图片</button>
+
+   <script type="text/javascript">
+       // 拿到要操作的标签
+       var img = document.getElementsByClassName('icon')[0];
+       var btn = document.getElementsByTagName('button')[0];
+//       console.log(img, btn);
+
+       console.log(img.src);
+       // 来回切换图片
+       // indexOf  lastIndexOf 如果找到,则返回任意正数,没有找到,返回-1
+       btn.onclick = function(){
+           if(img.src.lastIndexOf('image/img_01.jpg') != -1){
+               img.src = 'image/img_02.jpg';
+           }else{
+               img.src = 'image/img_01.jpg';
+           }
+       }
+
+   </script>
+</body>
+</html>

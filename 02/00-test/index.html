@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+       备注:只要子标签相对父标签进行定位,(无论是float还是position),子标签的类型都会被强制转换为"行内-块级标签"
+    -->
+    <style>
+       .test1{
+           width: 700px;
+           height: 250px;
+           background-color: red;
+       }
+
+        .test2{
+            background-color: blue;
+            float: left;
+            width: 300px;
+        }
+
+        .test3{
+            background-color: yellow;
+            float: right;
+        }
+        span{
+            background-color: green;
+            float: left;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+   <div class="test1">
+        <!--<div class="test2">1</div>-->
+        <!--<div class="test3">2</div>-->
+
+        <span>wqwq</span>
+        <span>wqwq</span>
+   </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        // 两个数相加
+       function sum(num1, num2){
+           return num1 + num2;
+       }
+        // 调用函数
+       var result = sum(200, 50);
+//       console.log(result);
+
+       // 万能的加法函数
+       function sum1(numbers){
+           var count = 0;
+           for(var i=0; i<numbers.length; i++){
+               count += numbers[i];
+           }
+           return count;
+       }
+
+       var numbers = [12,23,'10'];
+       var result1 = sum1(numbers);
+//       console.log(result1);
+
+       // 内置数组 arguments
+        function sum2(){
+            var count = 0;
+            for(var i=0; i<arguments.length; i++){
+                count += arguments[i];
+            }
+            return count;
+        }
+
+        var result2 = sum2(10,20,40,30);
+//        console.log(result2);
+
+       // 匿名函数
+      var test = function (){
+            console.log('我是匿名函数');
+        }
+        // 如何调用匿名函数
+          test();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        // 构造函数
+        function Dog(){
+            this.name = null;
+            this.height = null;
+            this.age = null;
+            this.friends = [];
+            this.eat = function(someThing){
+                console.log(this.name + '吃' + someThing);
+            },
+            this.run = function(someWhere){
+                console.log(this.name + '跑' + someWhere);
+            }
+        }
+
+        // 批量产生狗
+        var dog1 = new Dog();
+        var dog2 = new Dog();
+
+        // 赋值
+        dog1.name = 'wangcai';
+        dog1.height = 1.38;
+        dog1.age = 19;
+        dog1.friends = ['lili', 'xoxo'];
+
+        dog2.name = 'ahuang';
+        dog2.height = 0.55;
+        dog2.age = 1;
+        dog2.friends = [];
+
+//        console.log(dog1, dog2);
+//        dog1.eat('五花肉');
+//        dog2.eat('狗奶');
+
+
+        // 构造函数
+        function Dog(name, height,age, friends){
+            this.name = name;
+            this.height = height;
+            this.age = age;
+            this.friends = friends;
+            this.eat = function(someThing){
+                console.log(this.name + '吃' + someThing);
+            },
+                    this.run = function(someWhere){
+                        console.log(this.name + '跑' + someWhere);
+                    }
+        }
+
+        // 创建新的对象
+        var dog3 = new Dog('nn',12,1,['3232']);
+        console.log(dog3);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

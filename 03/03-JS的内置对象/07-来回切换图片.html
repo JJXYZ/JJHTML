@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <img id="icon" src="image/icon_01.png">
+   <p></p>
+   <button>上一张</button>
+   <button>下一张</button>
+   <script type="text/javascript">
+       // 拿到对应的标签
+       var img = document.getElementById('icon');
+       var pre = document.getElementsByTagName('button')[0];
+       var next = document.getElementsByTagName('button')[1];
+
+       // 定义全局的索引
+       var currentIndex = 1;
+       var minIndex = currentIndex;
+       var maxIndex = 9
+
+       // 上一张
+       pre.onclick = function(){
+           if(currentIndex == minIndex){
+               currentIndex = maxIndex;
+           }else{
+               currentIndex -= 1;
+           }
+           // 改变img中的src
+           img.src = 'image/icon_0'+currentIndex+'.png';
+           console.log(img.src);
+       }
+       // 下一张
+       next.onclick = function(){
+           if(currentIndex == maxIndex){
+               currentIndex = minIndex;
+           }else{
+               currentIndex += 1;
+           }
+           // 改变img中的src
+           img.src = 'image/icon_0'+currentIndex+'.png';
+           console.log(img.src);
+       }
+
+
+   </script>
+</body>
+</html>

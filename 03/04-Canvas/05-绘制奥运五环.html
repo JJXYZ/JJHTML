@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--画板-->
+<canvas id="canvas" style="background-color: black;">您当前的版本不支持,请升级版本!</canvas>
+
+<script type="text/javascript">
+    // 拿到画板
+    var canvas = document.getElementById('canvas');
+    canvas.width = 1000;
+    canvas.height = 700;
+    // 获取绘图的上下文
+    var context = canvas.getContext('2d');
+    context.lineWidth = 10;
+
+    // 定义一个颜色数组
+    var colorArr = ['red', 'green', 'blue', 'yellow', 'white'];
+
+    // 绘制奥运五环
+    for(var i=0; i< colorArr.length; i++){
+        context.beginPath();
+        context.strokeStyle = colorArr[i];
+        context.arc(150+i*100, 100, 80, 0, 2.0*Math.PI);
+        context.closePath();
+        context.stroke();
+    }
+
+    for(var i=0; i< colorArr.length; i++){
+        context.beginPath();
+        context.strokeStyle = colorArr[i];
+       if(i<3){
+           context.arc(150+i*100, 300, 90, 0, 2.0*Math.PI);
+       }else{
+           context.arc(200+(i-3)*100, 420, 90, 0, 2.0*Math.PI);
+       }
+        context.closePath();
+        context.stroke();
+    }
+
+
+</script>
+</body>
+</html>

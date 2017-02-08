@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Mac桌面网页版</title>
+    <!--
+       注意:
+         如果要引用外部的样式,自己写的样式一定要放在外部样式的后面
+       原因:
+         HTML是标记语言,(代码是解释运行而非编译运行,即从上往下..),自己写的样式放在后面会避免样式被覆盖
+    -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+   <!--头部-->
+   <div id="header">
+       <ul class="header-left">
+           <li><a href="#" class="glyphicon glyphicon-apple"></a></li>
+           <li><a href="#">5期</a></li>
+           <li><a href="#">文件</a></li>
+           <li><a href="#">编辑</a></li>
+           <li><a href="#">视图</a></li>
+           <li><a href="#">更多</a></li>
+       </ul>
+       <ul class="header-right">
+           <!-- 设置字体图标,把bootstrap上的类名拷贝即可--可以设置在任一标签上 -->
+           <li class="glyphicon glyphicon-volume-up"></li>
+           <li class="glyphicon glyphicon-align-left"></li>
+           <li class="glyphicon glyphicon-question-sign"></li>
+           <li class="glyphicon glyphicon-leaf"></li>
+           <li class="glyphicon glyphicon-envelope"></li>
+       </ul>
+   </div>
+   <!--中间主要内容-->
+   <div id="main">
+        <div class="file">
+            <img src="images/file.png" width="50">
+            <p>大神5期</p>
+        </div>
+        <div class="file">
+            <img src="images/file.png" width="50">
+                <p>大神5期</p>
+        </div>
+        <div class="file">
+            <img src="images/file.png" width="50">
+                <p>大神5期</p>
+                </div>
+   </div>
+   <!--尾部-->
+   <div id="footer">
+      <div class="dock">
+          <ul>
+              <li><a href="#"><img src="images/zurb-icon.png"></a></li>
+              <li><a href="#"><img src="images/linkedin-icon.png"></a> </li>
+              <li><a href="#"><img src="images/notable-icon.png"></a> </li>
+              <li><a href="#"><img src="images/lastfm-icon.png"></a> </li>
+              <li><a href="#"><img src="images/facebook-icon.png"></a> </li>
+              <li><a href="#"><img src="images/google-icon.png"></a> </li>
+              <li><a href="#"><img src="images/notable-icon.png"></a> </li>
+              <li><a href="#"><img src="images/lastfm-icon.png"></a> </li>
+              <li><a href="#"><img src="images/facebook-icon.png"></a> </li>
+              <li><a href="#"><img src="images/google-icon.png"></a> </li>
+          </ul>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{
+    padding: 0;
+    margin: 0;
+}
+
+/*全局设置a标签的颜色*/
+a{
+    color: black;
+}
+
+body{
+    /*设置整个页面的字体大小都是13px*/
+    font-size: 13px;
+    /*背景图片*/
+    background: url("../images/bg.jpg");
+}
+
+/*头部*/
+#header{
+  /*设置透明度*/
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+  /*外边距:上-右-下-左*/
+  margin: 0px 0px 30px 0;
+  height: 38px;
+  line-height: 38px;
+}
+
+#header a{
+    color: white;
+    margin-right: 7px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/*特殊的样式,可以单独设置一个类特殊设置*/
+#header a.more-product{
+    /*让行内标签---->行内-块级标签,就可以改变尺寸*/
+    display: inline-block;
+    background-color: #3385ff;
+    color: white;
+    width: 80px;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/*主要内容*/
+#content{
+  /*background-color: green;*/
+}
+
+/*设置搜索框外部的div的宽度,可以让其水平居中*/
+#content .search{
+    /*background-color: blue;*/
+    width: 600px;
+    height: 33px;
+    /*居中*/
+    margin: 0 auto;
+}
+
+#content .search input{
+    width: 500px;
+    height: 33px;
+    padding: 5px;
+    /*让内边距向内,伸缩,会占用内容的尺寸*/
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+/*伪类:获得焦点的时候调用*/
+#content .search input:focus{
+    /*去除外边框*/
+    outline: none;
+    border:1px solid #3385ff;
+}
+
+#content .search{
+    margin-bottom: 40px;
+}
+
+
+/*让a标签右浮动,只要设置了输入框的border之后,两个宽度加起来正好*/
+#content .search a{
+    display: inline-block;
+    background-color: #3385ff;
+    color: white;
+    width: 100px;
+    text-align: center;
+    height: 33px;
+    /*设置垂直居中*/
+    line-height: 33px;
+    /*去除下划线*/
+    text-decoration: none;
+    font-weight: normal;
+
+    float: right;
+}
+
+#content .logo{
+    text-align: center;
+}
+
+#content .logo img{
+    width: 270px;
+    height: 129px;
+}
+
+#content .dom{
+    text-align: center;
+}
+
+#content .dom img{
+   width: 150px;
+   margin: 5px;
+}
+
+#content .dom img:hover{
+    /*不透明度*/
+    opacity: 0.7;
+}
+
+
+/*尾部*/
+#footer{
+  margin-top: 120px;
+  /*background-color: yellow;*/
+  text-align: center;
+}
+
+#footer p{
+    margin-top: 10px;
+}
+
+#footer p a{
+    color: blue;
+}
+
+#footer p.footer-top a{
+    margin: 0 5px;
+}

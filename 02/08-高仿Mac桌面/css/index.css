@@ -1,0 +1,118 @@
+/*----清除页面自带的一些内边距和外边距----*/
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{
+    padding: 0;
+    margin: 0;
+}
+
+/*--统一去除列表中左边的圆点--*/
+ul{
+    list-style: none;
+}
+
+/*--统一对整个页面中的a标签进行样式的设置--*/
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+body{
+    /*设置背景图片,尺寸是拉伸*/
+    background:url("../images/apple.jpg");
+    background-size: cover;
+}
+
+/*--------------头部-----------------*/
+#header{
+    background-color: rgba(241,241,241,0.85);
+    height: 35px;
+    line-height: 35px;
+    box-shadow: 0 1px 2px black;
+    font-size: 17px;
+}
+
+/*顶部左边*/
+#header .header-left{
+    display: inline-block;
+}
+
+/*让顶部右边的li右浮动*/
+#header .header-left li{
+    float: left;
+}
+
+#header .header-left li a{
+    margin-left: 10px;
+}
+
+#header .header-right{
+    float: right;
+}
+
+#header .header-right li{
+    margin-right: 10px;
+}
+
+/*-----------------中间-------------------*/
+#main .file{
+    margin: 20px 20px;
+}
+
+#main .file p{
+    color: #ffffff;
+}
+
+
+/*-----------------尾部-------------------*/
+#footer{
+    /*让底部浮动在浏览器的底部*/
+    position: fixed;
+    bottom: 0;
+    /*设置宽度始终为浏览器的宽度*/
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    /*background-color: red;*/
+}
+
+#footer .dock{
+    width: 60%;
+    height: 100%;
+    background: url("../images/dock_bg.png");
+    margin: 0 auto;
+    /*设置顶部左边和右边的圆角*/
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+#footer .dock ul{
+    display: inline-block;
+}
+
+#footer .dock ul li{
+    float: left;
+    /*设置动画的过渡效果:线性 时长为0.25s*/
+    -webkit-transition: linear 0.25s;
+    -moz-transition: linear 0.25s;
+    -ms-transition: linear 0.25s;
+    -o-transition: linear 0.25s;
+    transition: linear 0.25s;
+}
+
+#footer .dock ul li:hover{
+    /*设置动画的方向*/
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+
+    /*设置动画的缩放比例*/
+    transform:scale(1.5);
+}
+
+#footer .dock img{
+    width: 50px;
+    margin: 0 7px;
+}

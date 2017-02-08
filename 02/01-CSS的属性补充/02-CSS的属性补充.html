@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input{
+            width: 500px;
+            height: 50px;
+            padding: 5px;
+            /*
+              box-sizing:一般用于输入框,当设置内边距的时候向内延伸,会占用内容的尺寸,但不会额外增加盒子的尺寸
+            */
+            box-sizing: border-box;
+        }
+
+        ul{
+            display: inline-block;
+            background-color: red;
+        }
+
+        /*
+          float:子标签浮动在父标签的最左边和最右边(left和right)
+        */
+
+        ul li{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+   <!--<input>-->
+   <ul>
+       <li>12212121</li>
+       <li>12212121</li>
+       <li>12212121</li>
+       <li>12212121</li>
+   </ul>
+</body>
+</html>

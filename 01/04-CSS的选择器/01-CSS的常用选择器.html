@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS的常见选择器</title>
+    <style>
+       /*标签选择器*/
+       div{
+          color: red;
+       }
+
+       p{
+          color: green;
+       }
+
+       /*类选择器*/
+        .test1{
+            color: blue;
+        }
+
+        /*id选择器*/
+        #main{
+            font-size: 60px;
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        /*---------前面的选择器是经常会用到 ------------*/
+
+        /*并列选择器*/
+        p , #main{
+            border: 4px dashed green;
+        }
+
+        /*复合选择器*/
+        p.test1{
+            font-size: 66px;
+        }
+
+        div#main{
+            font-size: 5px;
+        }
+
+        /*后代选择器*/
+        #test2 .test3 a{
+            font-size: 66px;
+        }
+
+        /*伪类*/
+        input:focus{
+            width: 500px;
+            height: 60px;
+            /*去除边框蓝线*/
+            outline: none;
+            border: 1px solid red;
+        }
+
+        #main:hover{
+            /*width: 100px;*/
+            /*height: 100px;*/
+            border: 0;
+            background-color: white;
+        }
+
+       #test4:first-letter{
+           font-size: 55px;
+       }
+    </style>
+</head>
+<body>
+
+   <div id="main">2222222222222222</div>
+   <div>2222222222222222</div>
+   <div>2222222222222222</div>
+   <div>2222222222222222</div>
+   <p>111111111111111111</p>
+   <p>111111111111111111</p>
+   <p id="test4">111111111111111111</p>
+   <div>2222222222222222</div>
+   <div class="test1">2222222222222222</div>
+   <p class="test1">111111111111111111</p>
+   <div id="test2">
+       <p class="test3">
+           <a href="#">我是超链接</a>
+       </p>
+   </div>
+
+   <input type="text" value="">
+
+</body>
+</html>
