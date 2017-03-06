@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <div id="main">
+       <p>我是哈哈哈哈</p>
+       <p>我是哈哈哈哈</p>
+       <p>我是哈哈哈哈</p>
+       <p>我是哈哈哈哈</p>
+       <p>我是哈哈哈哈</p>
+       <p>我是哈哈哈哈</p>
+       <div class="test1">
+           <img src="image/img_01.jpg">
+           <img src="image/img_01.jpg">
+           <img src="image/img_01.jpg">
+           <img src="image/img_01.jpg">
+           <img src="image/img_01.jpg">
+       </div>
+   </div>
+
+   <button>显示</button>
+   <button>隐藏</button>
+
+   <button>切换</button>
+
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    // 拿到p标签   $()
+//     alert($('p'));
+    // 查看p中的内容
+     console.log($('p').text());
+    // 改变p标签中的内容
+    $('p').text('我是段落');
+
+    // 查看img中的属性
+   console.log($('img').attr('src'));
+    // 改变img的属性
+    $('img').attr('src', 'image/img_02.jpg');
+    // 改变图片的宽度
+    $('img').attr('width', '200px');
+
+    // DOM操作  css的选择器都可以作用于jQuery
+    $('.test1>img').attr('src', 'image/img_03.jpg');
+
+    // 拿到按钮
+    $('button').eq(0).on('click', function(){
+        $('p').show();
+        $('img').show();
+    });
+
+    $('button').eq(1).on('click', function(){
+        $('p').hide();
+        $('img').hide();
+    });
+
+    $('button').eq(2).on('click', function(){
+        $('p').toggle(2000);
+        $('img').toggle(2000);
+    });
+
+
+    // 遍历
+      var number = [10,3232,43,45,776];
+    $.each(number,function(index, value){
+        console.log(index, value);
+    });
+
+    // 取出下标
+   var index = $.inArray(3232,number);
+    console.log(index);
+
+    $('#main>p').css({
+        'border' : '1px solid red',
+        'color' : 'red'
+    });
+
+</script>
+</body>
+</html>

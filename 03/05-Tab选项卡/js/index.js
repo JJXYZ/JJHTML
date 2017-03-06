@@ -5,7 +5,7 @@
 
 // == 值比较  === 类型比较 $(id) ---->  document.getElementById(id)
 function $(id){
-  return typeof id === 'string' ? document.getElementById(id):id;
+    return typeof id === 'string' ? document.getElementById(id):id;
 }
 
 // 当页面加载完毕
